@@ -1,0 +1,558 @@
+Mengunduh dataset dari Kaggle...
+Path ke file dataset: /root/.cache/kagglehub/datasets/nypd/vehicle-collisions/versions/2
+File CSV yang digunakan: /root/.cache/kagglehub/datasets/nypd/vehicle-collisions/versions/2/database.csv
+
+Memuat dataset...
+Mengonversi DATE ke format datetime saat memuat...
+Tipe data DATE setelah konversi awal: datetime64[ns]
+Contoh 5 baris pertama DATE setelah konversi awal:
+0   2015-01-01
+1   2015-01-01
+2   2015-01-01
+3   2015-01-01
+4   2015-01-01
+Jumlah nilai NaT di DATE: 0
+Dataset awal:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 477732 entries, 0 to 477731
+Data columns (total 29 columns):
+ #   Column               Non-Null Count   Dtype         
+---  ------               --------------   -----         
+ 0   UNIQUE KEY           477732 non-null  int64         
+ 1   DATE                 477732 non-null  datetime64[ns]
+ 2   TIME                 477732 non-null  object        
+ 3   BOROUGH              338390 non-null  object        
+ 4   ZIP CODE             338329 non-null  float64       
+ 5   LATITUDE             356600 non-null  float64       
+ 6   LONGITUDE            356600 non-null  float64       
+ 7   LOCATION             356600 non-null  object        
+ 8   ON STREET NAME       364552 non-null  object        
+ 9   CROSS STREET NAME    335574 non-null  object        
+ 10  OFF STREET NAME      58511 non-null   object        
+ 11  PERSONS INJURED      477732 non-null  int64         
+ 12  PERSONS KILLED       477732 non-null  int64         
+ 13  PEDESTRIANS INJURED  477732 non-null  int64         
+ 14  PEDESTRIANS KILLED   477732 non-null  int64         
+ 15  CYCLISTS INJURED     477732 non-null  int64         
+ 16  CYCLISTS KILLED      477732 non-null  int64         
+ 17  MOTORISTS INJURED    477732 non-null  int64         
+ 18  MOTORISTS KILLED     477732 non-null  int64         
+ 19  VEHICLE 1 TYPE       473777 non-null  object        
+ 20  VEHICLE 2 TYPE       396795 non-null  object        
+ 21  VEHICLE 3 TYPE       30264 non-null   object        
+ 22  VEHICLE 4 TYPE       6831 non-null    object        
+ 23  VEHICLE 5 TYPE       1683 non-null    object        
+ 24  VEHICLE 1 FACTOR     474483 non-null  object        
+ 25  VEHICLE 2 FACTOR     415401 non-null  object        
+ 26  VEHICLE 3 FACTOR     31638 non-null   object        
+ 27  VEHICLE 4 FACTOR     7232 non-null    object        
+ 28  VEHICLE 5 FACTOR     1762 non-null    object        
+dtypes: datetime64[ns](1), float64(3), int64(9), object(16)
+memory usage: 105.7+ MB
+
+Kolom yang tersedia:
+['UNIQUE KEY', 'DATE', 'TIME', 'BOROUGH', 'ZIP CODE', 'LATITUDE', 'LONGITUDE', 'LOCATION', 'ON STREET NAME', 'CROSS STREET NAME', 'OFF STREET NAME', 'PERSONS INJURED', 'PERSONS KILLED', 'PEDESTRIANS INJURED', 'PEDESTRIANS KILLED', 'CYCLISTS INJURED', 'CYCLISTS KILLED', 'MOTORISTS INJURED', 'MOTORISTS KILLED', 'VEHICLE 1 TYPE', 'VEHICLE 2 TYPE', 'VEHICLE 3 TYPE', 'VEHICLE 4 TYPE', 'VEHICLE 5 TYPE', 'VEHICLE 1 FACTOR', 'VEHICLE 2 FACTOR', 'VEHICLE 3 FACTOR', 'VEHICLE 4 FACTOR', 'VEHICLE 5 FACTOR']
+
+Statistik deskriptif awal:
+          UNIQUE KEY                           DATE    TIME   BOROUGH       ZIP CODE       LATITUDE      LONGITUDE                   LOCATION ON STREET NAME CROSS STREET NAME OFF STREET NAME  PERSONS INJURED  PERSONS KILLED  PEDESTRIANS INJURED  PEDESTRIANS KILLED  CYCLISTS INJURED  CYCLISTS KILLED  MOTORISTS INJURED  MOTORISTS KILLED     VEHICLE 1 TYPE     VEHICLE 2 TYPE     VEHICLE 3 TYPE     VEHICLE 4 TYPE     VEHICLE 5 TYPE VEHICLE 1 FACTOR VEHICLE 2 FACTOR VEHICLE 3 FACTOR VEHICLE 4 FACTOR VEHICLE 5 FACTOR
+count   4.777320e+05                         477732  477732    338390  338329.000000  356600.000000  356600.000000                     356600         364552            335574           58511    477732.000000   477732.000000        477732.000000       477732.000000     477732.000000    477732.000000      477732.000000     477732.000000             473777             396795              30264               6831               1683           474483           415401            31638             7232             1762
+unique           NaN                            NaN    1440         5            NaN            NaN            NaN                      81439           8059              8589           49111              NaN             NaN                  NaN                 NaN               NaN              NaN                NaN               NaN                 17                 17                 17                 17                 13               48               48               42               40               28
+top              NaN                            NaN   17:00  BROOKLYN            NaN            NaN            NaN  (40.8100528, -73.9251435)       BROADWAY          3 AVENUE        3 AVENUE              NaN             NaN                  NaN                 NaN               NaN              NaN                NaN               NaN  PASSENGER VEHICLE  PASSENGER VEHICLE  PASSENGER VEHICLE  PASSENGER VEHICLE  PASSENGER VEHICLE      UNSPECIFIED      UNSPECIFIED      UNSPECIFIED      UNSPECIFIED      UNSPECIFIED
+freq             NaN                            NaN    5703    104961            NaN            NaN            NaN                        260           4885              4847              72              NaN             NaN                  NaN                 NaN               NaN              NaN                NaN               NaN             295532             221600              19269               4385               1082           235726           343037            28079             6438             1584
+mean    3.385172e+06  2016-02-04 00:15:02.644998144     NaN       NaN   10822.046192      40.722105     -73.919663                        NaN            NaN               NaN             NaN         0.247875        0.001059             0.052297            0.000620          0.021799         0.000077           0.200589          0.000377                NaN                NaN                NaN                NaN                NaN              NaN              NaN              NaN              NaN              NaN
+min     3.145850e+06            2015-01-01 00:00:00     NaN       NaN   10000.000000       0.000000    -201.359990                        NaN            NaN               NaN             NaN         0.000000        0.000000             0.000000            0.000000          0.000000         0.000000           0.000000          0.000000                NaN                NaN                NaN                NaN                NaN              NaN              NaN              NaN              NaN              NaN
+25%     3.265680e+06            2015-07-25 00:00:00     NaN       NaN   10301.000000      40.669459     -73.976996                        NaN            NaN               NaN             NaN         0.000000        0.000000             0.000000            0.000000          0.000000         0.000000           0.000000          0.000000                NaN                NaN                NaN                NaN                NaN              NaN              NaN              NaN              NaN              NaN
+50%     3.385126e+06            2016-02-06 00:00:00     NaN       NaN   11206.000000      40.723010     -73.930778                        NaN            NaN               NaN             NaN         0.000000        0.000000             0.000000            0.000000          0.000000         0.000000           0.000000          0.000000                NaN                NaN                NaN                NaN                NaN              NaN              NaN              NaN              NaN              NaN
+75%     3.504669e+06            2016-08-17 00:00:00     NaN       NaN   11237.000000      40.766846     -73.866649                        NaN            NaN               NaN             NaN         0.000000        0.000000             0.000000            0.000000          0.000000         0.000000           0.000000          0.000000                NaN                NaN                NaN                NaN                NaN              NaN              NaN              NaN              NaN              NaN
+max     3.625023e+06            2017-02-28 00:00:00     NaN       NaN   11697.000000      40.912884       0.000000                        NaN            NaN               NaN             NaN        32.000000        3.000000             8.000000            2.000000          6.000000         1.000000          36.000000          3.000000                NaN                NaN                NaN                NaN                NaN              NaN              NaN              NaN              NaN              NaN
+std     1.379931e+05                            NaN     NaN       NaN     563.513655       0.275332       0.748452                        NaN            NaN               NaN             NaN         0.644326        0.034037             0.256052            0.025218          0.162512         0.008800           0.717096          0.022317                NaN                NaN                NaN                NaN                NaN              NaN              NaN              NaN              NaN              NaN
+
+
+Menangani missing values...
+Jumlah missing values sebelum preprocessing:
+UNIQUE KEY                  0
+DATE                        0
+TIME                        0
+BOROUGH                139342
+ZIP CODE               139403
+LATITUDE               121132
+LONGITUDE              121132
+LOCATION               121132
+ON STREET NAME         113180
+CROSS STREET NAME      142158
+OFF STREET NAME        419221
+PERSONS INJURED             0
+PERSONS KILLED              0
+PEDESTRIANS INJURED         0
+PEDESTRIANS KILLED          0
+CYCLISTS INJURED            0
+CYCLISTS KILLED             0
+MOTORISTS INJURED           0
+MOTORISTS KILLED            0
+VEHICLE 1 TYPE           3955
+VEHICLE 2 TYPE          80937
+VEHICLE 3 TYPE         447468
+VEHICLE 4 TYPE         470901
+VEHICLE 5 TYPE         476049
+VEHICLE 1 FACTOR         3249
+VEHICLE 2 FACTOR        62331
+VEHICLE 3 FACTOR       446094
+VEHICLE 4 FACTOR       470500
+VEHICLE 5 FACTOR       475970
+
+Persentase missing values sebelum preprocessing:
+UNIQUE KEY              0.000000
+DATE                    0.000000
+TIME                    0.000000
+BOROUGH                29.167399
+ZIP CODE               29.180168
+LATITUDE               25.355639
+LONGITUDE              25.355639
+LOCATION               25.355639
+ON STREET NAME         23.691107
+CROSS STREET NAME      29.756851
+OFF STREET NAME        87.752338
+PERSONS INJURED         0.000000
+PERSONS KILLED          0.000000
+PEDESTRIANS INJURED     0.000000
+PEDESTRIANS KILLED      0.000000
+CYCLISTS INJURED        0.000000
+CYCLISTS KILLED         0.000000
+MOTORISTS INJURED       0.000000
+MOTORISTS KILLED        0.000000
+VEHICLE 1 TYPE          0.827870
+VEHICLE 2 TYPE         16.941926
+VEHICLE 3 TYPE         93.665067
+VEHICLE 4 TYPE         98.570119
+VEHICLE 5 TYPE         99.647710
+VEHICLE 1 FACTOR        0.680088
+VEHICLE 2 FACTOR       13.047273
+VEHICLE 3 FACTOR       93.377458
+VEHICLE 4 FACTOR       98.486181
+VEHICLE 5 FACTOR       99.631174
+
+Jumlah missing values setelah imputasi:
+UNIQUE KEY             0
+DATE                   0
+TIME                   0
+BOROUGH                0
+ZIP CODE               0
+LATITUDE               0
+LONGITUDE              0
+LOCATION               0
+ON STREET NAME         0
+CROSS STREET NAME      0
+OFF STREET NAME        0
+PERSONS INJURED        0
+PERSONS KILLED         0
+PEDESTRIANS INJURED    0
+PEDESTRIANS KILLED     0
+CYCLISTS INJURED       0
+CYCLISTS KILLED        0
+MOTORISTS INJURED      0
+MOTORISTS KILLED       0
+VEHICLE 1 TYPE         0
+VEHICLE 2 TYPE         0
+VEHICLE 3 TYPE         0
+VEHICLE 4 TYPE         0
+VEHICLE 5 TYPE         0
+VEHICLE 1 FACTOR       0
+VEHICLE 2 FACTOR       0
+VEHICLE 3 FACTOR       0
+VEHICLE 4 FACTOR       0
+VEHICLE 5 FACTOR       0
+
+Persentase missing values setelah imputasi:
+UNIQUE KEY             0.0
+DATE                   0.0
+TIME                   0.0
+BOROUGH                0.0
+ZIP CODE               0.0
+LATITUDE               0.0
+LONGITUDE              0.0
+LOCATION               0.0
+ON STREET NAME         0.0
+CROSS STREET NAME      0.0
+OFF STREET NAME        0.0
+PERSONS INJURED        0.0
+PERSONS KILLED         0.0
+PEDESTRIANS INJURED    0.0
+PEDESTRIANS KILLED     0.0
+CYCLISTS INJURED       0.0
+CYCLISTS KILLED        0.0
+MOTORISTS INJURED      0.0
+MOTORISTS KILLED       0.0
+VEHICLE 1 TYPE         0.0
+VEHICLE 2 TYPE         0.0
+VEHICLE 3 TYPE         0.0
+VEHICLE 4 TYPE         0.0
+VEHICLE 5 TYPE         0.0
+VEHICLE 1 FACTOR       0.0
+VEHICLE 2 FACTOR       0.0
+VEHICLE 3 FACTOR       0.0
+VEHICLE 4 FACTOR       0.0
+VEHICLE 5 FACTOR       0.0
+
+Menghapus duplikat...
+Jumlah duplikat sebelum: 63644
+Persentase duplikat sebelum: 13.32%
+Jumlah duplikat setelah: 0
+Persentase duplikat setelah: 0.00%
+
+Melakukan normalisasi dan standarisasi...
+Statistik Total Victims (Original):
+count    414088.000000
+mean          0.243963
+std           0.640842
+min           0.000000
+25%           0.000000
+50%           0.000000
+75%           0.000000
+max          32.000000
+
+Statistik Total Victims MinMax:
+count    414088.000000
+mean          0.007624
+std           0.020026
+min           0.000000
+25%           0.000000
+50%           0.000000
+75%           0.000000
+max           1.000000
+
+Statistik Total Victims ZScore:
+count    4.140880e+05
+mean     2.244426e-17
+std      1.000001e+00
+min     -3.806915e-01
+25%     -3.806915e-01
+50%     -3.806915e-01
+75%     -3.806915e-01
+max      4.955370e+01
+
+Memeriksa dan menyeragamkan konsistensi teks...
+Contoh 5 baris pertama setelah penyeragaman teks (kolom teks saja):
+    BOROUGH    ON STREET NAME               VEHICLE 1 TYPE             VEHICLE 1 FACTOR
+0    QUEENS         47 AVENUE  SPORT UTILITY/STATION WAGON  TRAFFIC CONTROL DISREGARDED
+1   UNKNOWN           UNKNOWN            PASSENGER VEHICLE               ANIMALS ACTION
+2  BROOKLYN    BEDFORD AVENUE            PASSENGER VEHICLE              FATIGUED/DROWSY
+3  BROOKLYN    BUFFALO AVENUE                          BUS           LOST CONSCIOUSNESS
+4   UNKNOWN  RICHMOND TERRACE                      UNKNOWN                  UNSPECIFIED
+
+Mendeteksi outlier menggunakan Z-score...
+Jumlah outlier yang terdeteksi (Z-score > 3): 5805
+Persentase outlier: 1.40%
+Statistik Total Victims setelah menghapus outlier:
+count    408283.000000
+mean          0.193946
+std           0.457472
+min           0.000000
+25%           0.000000
+50%           0.000000
+75%           0.000000
+max           2.000000
+
+Mendeteksi outlier pada LATITUDE dan LONGITUDE menggunakan Z-score...
+Jumlah outlier LATITUDE (Z-score > 3): 14
+Jumlah outlier LONGITUDE (Z-score > 3): 22
+Baris setelah menghapus outlier LATITUDE dan LONGITUDE: 408261
+
+Verifikasi tipe data DATE sebelum time series:
+Tipe data DATE: datetime64[ns]
+Contoh 5 baris pertama DATE:
+0   2015-01-01
+1   2015-01-01
+2   2015-01-01
+3   2015-01-01
+4   2015-01-01
+Jumlah nilai NaT di DATE: 0
+
+Membuat visualisasi dan analisis teks...
+
+Analisis Missing Values:
+Missing values sebelum imputasi (top 5):
+VEHICLE 5 TYPE      476049
+VEHICLE 5 FACTOR    475970
+VEHICLE 4 TYPE      470901
+VEHICLE 4 FACTOR    470500
+VEHICLE 3 TYPE      447468
+Missing values setelah imputasi (top 5):
+UNIQUE KEY    0
+DATE          0
+TIME          0
+BOROUGH       0
+ZIP CODE      0
+Plot disimpan sebagai: vehicle_collision_analysis_20250316_151642/missing_values_comparison.png
+
+Analisis Distribusi Total Victims:
+Statistik sebelum outlier:
+count    477732.000000
+mean          0.248935
+std           0.645859
+min           0.000000
+25%           0.000000
+50%           0.000000
+75%           0.000000
+max          32.000000
+Statistik setelah outlier:
+count    408261.000000
+mean          0.193947
+std           0.457464
+min           0.000000
+25%           0.000000
+50%           0.000000
+75%           0.000000
+max           2.000000
+Plot disimpan sebagai: vehicle_collision_analysis_20250316_151642/total_victims_distribution.png
+
+Distribusi Kecelakaan per Borough:
+BOROUGH
+UNKNOWN          100615
+BROOKLYN          95340
+QUEENS            80923
+MANHATTAN         77088
+BRONX             41593
+STATEN ISLAND     12702
+Persentase per Borough:
+BOROUGH
+UNKNOWN          24.644774
+BROOKLYN         23.352708
+QUEENS           19.821389
+MANHATTAN        18.882039
+BRONX            10.187846
+STATEN ISLAND     3.111245
+Plot disimpan sebagai: vehicle_collision_analysis_20250316_151642/borough_distribution.png
+
+Top 10 Jenis Kendaraan dalam Kecelakaan:
+VEHICLE 1 TYPE
+PASSENGER VEHICLE                 246436
+SPORT UTILITY/STATION WAGON        90330
+TAXI                               13812
+UNKNOWN                            10270
+OTHER                               9253
+VAN                                 9025
+PICK-UP TRUCK                       6543
+SMALL COM VEH(4 TIRES)              5529
+LARGE COM VEH(6 OR MORE TIRES)      4594
+BUS                                 4527
+Persentase Top 10 Jenis Kendaraan:
+VEHICLE 1 TYPE
+PASSENGER VEHICLE                 60.362366
+SPORT UTILITY/STATION WAGON       22.125552
+TAXI                               3.383130
+UNKNOWN                            2.515548
+OTHER                              2.266442
+VAN                                2.210596
+PICK-UP TRUCK                      1.602651
+SMALL COM VEH(4 TIRES)             1.354281
+LARGE COM VEH(6 OR MORE TIRES)     1.125261
+BUS                                1.108849
+Plot disimpan sebagai: vehicle_collision_analysis_20250316_151642/top_10_vehicle_types.png
+
+Top 10 Faktor Penyebab Kecelakaan:
+VEHICLE 1 FACTOR
+UNSPECIFIED                       197976
+DRIVER INATTENTION/DISTRACTION     60702
+FATIGUED/DROWSY                    19561
+FAILURE TO YIELD RIGHT-OF-WAY      19188
+OTHER VEHICULAR                    14471
+BACKING UNSAFELY                   12943
+TURNING IMPROPERLY                 10191
+LOST CONSCIOUSNESS                  8430
+FOLLOWING TOO CLOSELY               7540
+PRESCRIPTION MEDICATION             5951
+Persentase Top 10 Faktor Penyebab:
+VEHICLE 1 FACTOR
+UNSPECIFIED                       48.492508
+DRIVER INATTENTION/DISTRACTION    14.868430
+FATIGUED/DROWSY                    4.791298
+FAILURE TO YIELD RIGHT-OF-WAY      4.699935
+OTHER VEHICULAR                    3.544546
+BACKING UNSAFELY                   3.170276
+TURNING IMPROPERLY                 2.496197
+LOST CONSCIOUSNESS                 2.064856
+FOLLOWING TOO CLOSELY              1.846858
+PRESCRIPTION MEDICATION            1.457646
+Plot disimpan sebagai: vehicle_collision_analysis_20250316_151642/top_10_vehicle_factors.png
+
+Analisis Lokasi Kecelakaan:
+Statistik Latitude:
+count    408261.000000
+mean         40.723621
+std           0.071949
+min          40.499135
+25%          40.678455
+50%          40.722105
+75%          40.760776
+max          40.912884
+Statistik Longitude:
+count    408261.000000
+mean        -73.920531
+std           0.079089
+min         -74.253031
+25%         -73.969360
+50%         -73.919663
+75%         -73.880908
+max         -73.700597
+Plot disimpan sebagai: vehicle_collision_analysis_20250316_151642/accident_locations.png
+
+Korelasi Antar Variabel Numerik:
+                     LATITUDE  LONGITUDE  PERSONS INJURED  PERSONS KILLED  PEDESTRIANS INJURED  PEDESTRIANS KILLED  CYCLISTS INJURED  CYCLISTS KILLED  MOTORISTS INJURED  MOTORISTS KILLED
+LATITUDE             1.000000   0.314062        -0.016154       -0.004308             0.005263           -0.002262         -0.000864        -0.000785          -0.019105         -0.003897
+LONGITUDE            0.314062   1.000000         0.032866       -0.000243            -0.009451           -0.000308         -0.027919        -0.002128           0.053237          0.000938
+PERSONS INJURED     -0.016154   0.032866         1.000000       -0.003069             0.405371           -0.005773          0.244107        -0.001558           0.798533          0.003117
+PERSONS KILLED      -0.004308  -0.000243        -0.003069        1.000000            -0.000746            0.763190         -0.002804         0.270975          -0.000149          0.572575
+PEDESTRIANS INJURED  0.005263  -0.009451         0.405371       -0.000746             1.000000            0.001834         -0.025895        -0.001745          -0.058453         -0.002818
+PEDESTRIANS KILLED  -0.002262  -0.000308        -0.005773        0.763190             0.001834            1.000000         -0.003076        -0.000190          -0.004371         -0.000365
+CYCLISTS INJURED    -0.000864  -0.027919         0.244107       -0.002804            -0.025895           -0.003076          1.000000         0.003048          -0.038240         -0.002143
+CYCLISTS KILLED     -0.000785  -0.002128        -0.001558        0.270975            -0.001745           -0.000190          0.003048         1.000000          -0.001860         -0.000132
+MOTORISTS INJURED   -0.019105   0.053237         0.798533       -0.000149            -0.058453           -0.004371         -0.038240        -0.001860           1.000000          0.007200
+MOTORISTS KILLED    -0.003897   0.000938         0.003117        0.572575            -0.002818           -0.000365         -0.002143        -0.000132           0.007200          1.000000
+Plot disimpan sebagai: vehicle_collision_analysis_20250316_151642/correlation_heatmap.png
+
+Membuat time series plot...
+
+Jumlah Kecelakaan per Bulan:
+MONTH
+2015-01    15436
+2015-02    14563
+2015-03    17238
+2015-04    16103
+2015-05    18369
+2015-06    17915
+2015-07    17938
+2015-08    18133
+2015-09    17732
+2015-10    18999
+2015-11    17241
+2015-12    18024
+2016-01    17435
+2016-02    15400
+2016-03    17503
+2016-04    17343
+2016-05    18410
+2016-06    17554
+2016-07    15831
+2016-08     3174
+2016-09     3686
+2016-10    12910
+2016-11    13866
+2016-12    16386
+2017-01    16046
+2017-02    15026
+Freq: M
+Plot disimpan sebagai: vehicle_collision_analysis_20250316_151642/monthly_accident_trend.png
+
+Membuat dashboard interaktif multidimensi...
+Dashboard disimpan sebagai HTML: vehicle_collision_analysis_20250316_151642/multidimensional_dashboard_20250316_151642.html
+Gagal menyimpan dashboard sebagai PNG: 
+Image export using the "kaleido" engine requires the kaleido package,
+which can be installed using pip:
+    $ pip install -U kaleido
+
+Silakan instal kaleido dengan 'pip install -U kaleido' untuk mendukung ekspor PNG.
+
+Membuat dashboard analisis temporal...
+
+Kecelakaan per Jam:
+HOUR
+0     11124
+1      6575
+2      5085
+3      4281
+4      5071
+5      5523
+6      8879
+7     11804
+8     23226
+9     22753
+10    21078
+11    21895
+12    22824
+13    23870
+14    27789
+15    25181
+16    30029
+17    29018
+18    25970
+19    20889
+20    17458
+21    14257
+22    13177
+23    10505
+
+Kecelakaan per Hari:
+DAY_OF_WEEK
+Monday       58409
+Tuesday      61311
+Wednesday    60401
+Thursday     61624
+Friday       64616
+Saturday     53687
+Sunday       48213
+
+Kecelakaan per Bulan:
+MONTH_NAME
+January      48917
+February     44989
+March        34741
+April        33446
+May          36779
+June         35469
+July         33769
+August       21307
+September    21418
+October      31909
+November     31107
+December     34410
+Dashboard disimpan sebagai HTML: vehicle_collision_analysis_20250316_151642/temporal_dashboard_20250316_151642.html
+Gagal menyimpan dashboard sebagai PNG: 
+Image export using the "kaleido" engine requires the kaleido package,
+which can be installed using pip:
+    $ pip install -U kaleido
+
+Silakan instal kaleido dengan 'pip install -U kaleido' untuk mendukung ekspor PNG.
+
+Membuat dashboard tambahan...
+
+Korban Berdasarkan Jenis:
+Pejalan Kaki: 20575
+Pengendara Sepeda: 7824
+Pengemudi: 54722
+
+Perbandingan Cedera vs Kematian:
+Pejalan Kaki Cedera: 20357
+Pejalan Kaki Meninggal: 218
+Pengendara Sepeda Cedera: 7796
+Pengendara Sepeda Meninggal: 28
+Pengemudi Cedera: 54598
+Pengemudi Meninggal: 124
+Dashboard disimpan sebagai HTML: vehicle_collision_analysis_20250316_151642/victims_dashboard_20250316_151642.html
+Gagal menyimpan dashboard sebagai PNG: 
+Image export using the "kaleido" engine requires the kaleido package,
+which can be installed using pip:
+    $ pip install -U kaleido
+
+Silakan instal kaleido dengan 'pip install -U kaleido' untuk mendukung ekspor PNG.
+
+Menyimpan dataset yang telah diproses...
+Dataset disimpan sebagai: vehicle_collision_analysis_20250316_151642/vehicle_collisions_processed_20250316_151642.csv
+
+=== Insight Bisnis untuk Pemerintah NYC ===
+1. **Fokus pada Faktor Penyebab Utama:**
+   - Faktor utama kecelakaan adalah 'UNSPECIFIED' dan 'DRIVER INATTENTION/DISTRACTION'. Pemerintah dapat meningkatkan kampanye kesadaran tentang fokus saat mengemudi, seperti mengurangi penggunaan ponsel saat berkendara.
+2. **Waktu Rawan Kecelakaan:**
+   - Kecelakaan paling sering terjadi pada jam 14:00-17:00 (puncak aktivitas sore). Pemerintah dapat meningkatkan patroli lalu lintas pada jam-jam ini, terutama di wilayah seperti Brooklyn dan Manhattan.
+3. **Lokasi Rawan Kecelakaan:**
+   - Brooklyn dan Manhattan memiliki jumlah kecelakaan tertinggi. Infrastruktur lalu lintas di wilayah ini perlu dievaluasi, misalnya menambah lampu lalu lintas atau rambu peringatan.
+4. **Jenis Kendaraan yang Sering Terlibat:**
+   - Kendaraan penumpang dan SUV paling sering terlibat dalam kecelakaan. Pemerintah dapat mempertimbangkan regulasi khusus untuk pengemudi jenis kendaraan ini, seperti pelatihan keselamatan tambahan.
+5. **Hari dengan Kecelakaan Tinggi:**
+   - Jumat adalah hari dengan kecelakaan tertinggi, mungkin karena aktivitas akhir pekan. Pemerintah dapat meningkatkan pengawasan pada hari ini.
+
+Ringkasan preprocessing:
+Baris awal: 477732
+Baris setelah preprocessing: 408261
+Missing values dihapus/ditangani: 4254154
+Duplikat dihapus: 63644
+Outlier dihapus: 5827
